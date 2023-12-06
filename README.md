@@ -19,7 +19,7 @@
 
 ## Additional Notes
 - Faker is one of the most used tools in this code base, here are some [more advanced examples](https://faker.readthedocs.io/en/master/fakerclass.html#examples) if you wanna consider them, but you can always chatGPT:)
-- Usually, when I do a typical id (auto-incrementing integer), I usually do it like the id in this scenario:
+- Usually, when I do a typical ```id``` (auto-incrementing integer), I usually do it like the id in this scenario:
 
   ```python
   record = {
@@ -27,7 +27,7 @@
   }
   ```
 
-- When you need to reference one foreign key for example, you can do it like the userid, generate a unique random number of that specific range:
+- When you need to reference one foreign key for example, you can do it like the ```userid```, generate a unique random number of that specific range:
 
   ```python
   record = {
@@ -35,7 +35,7 @@
   }
   ```
 
-- If you have an entity that has multiple primary keys, I found it helpful to generate unique pairs/triplets/etc... using find_combos() function like this: 
+- If you have an entity that has multiple primary keys, I found it helpful to generate unique pairs/triplets/etc... using ```find_combos()``` function like this: 
 
   ```python
   combos = find_combos(ranges=[(1, 500), (1, 500)])
@@ -44,7 +44,7 @@
       'bookingid': combos[1],
   }
   ```
-  where userid and bookingid are both primary keys, where both of them have a range where they can be mutually unique.
+  where ```userid``` and ```bookingid``` are both primary keys, where both of them have a range where they can be mutually unique.
 
 - If you ever wanted to generate start and end time that happen sequentially, do it like this: 
   ```python
