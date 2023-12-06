@@ -3,11 +3,11 @@
 ## Getting it to Run
 - Clone this repository or just download zip
 
-- Once you are in the terminal under the same director(assuming you already know how to run python and have pip installed), run:
+- Once you are in the terminal under the same directory(assuming you already know how to run python and have pip installed), run:
 
   ```pip install -r requirements.txt```
 
-- Once you have modified the code based on you needs following the instructions in the code, run: 
+- Once you have modified the code based on your needs following the instructions in the code, run: 
 
   ```python fake_data_generator.py```
 
