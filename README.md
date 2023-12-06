@@ -31,25 +31,38 @@
 - When you need to reference one foreign key for example, you can do it like the userid, generate a unique random number of that specific range:
 
   ```python
-          record = {
-              'roomnumber': fake.random_int(min = 1, max = 50),
-              'hotelid': fake.unique.random_int(min = 1, max = 500),
-              'size': fake.random_int(min = 500, max = 1000),
-              'description': "'" + fake.paragraph(nb_sentences=3) + "'",
-              'pricenight': generate_random_decimal(min_value=100, max_value=1000, decimal_places=2),
-          }
+  record = {
+      'roomnumber': fake.random_int(min = 1, max = 50),
+      'hotelid': fake.unique.random_int(min = 1, max = 500),
+      'size': fake.random_int(min = 500, max = 1000),
+      'description': "'" + fake.paragraph(nb_sentences=3) + "'",
+      'pricenight': generate_random_decimal(min_value=100, max_value=1000, decimal_places=2),
+  }
   ```
 
 - If you have an entity that has multiple primary keys, I found it helpful to generate unique pairs/triplets/etc... using find_combos() function like this: 
 
   ```python
   combos = find_combos(ranges=[(1, 500), (1, 500)])
-        record = {
-            'userid': combos[0],
-            'bookingid': combos[1],
-            'stars': fake.random_int(min = 1, max = 5),
-            'content': "'" + fake.paragraph(nb_sentences=3) + "'",
-        }
+  record = {
+      'userid': combos[0],
+      'bookingid': combos[1],
+      'stars': fake.random_int(min = 1, max = 5),
+      'content': "'" + fake.paragraph(nb_sentences=3) + "'",
+  }
+  ```
+
+- If you ever wanted to generate start and end time that happen sequentially, do it like this: 
+  ```python
+  start_time, end_time = generate_random_start_end_times()
+  record = {
+      'id': i,
+      'userid': fake.unique.random_int(min = 1, max = 500),
+      'roomnumber': fake.random_int(min = 1, max = 50),
+      'hotelid': fake.random_int(min = 1, max = 500),
+      "starttime": "'" + start_time + "'",
+      "endtime": "'" + end_time + "'",
+  }
   ```
 
 where userid and bookingid are both primary keys, where both of them have a range where they can be mutually unique.
