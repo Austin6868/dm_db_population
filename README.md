@@ -40,7 +40,7 @@
           }
   ```
 
-- If you have an entity that has multiple primary keys, I found it helpful to generate unique pairs/triplets/etc... using find_combo function like this: 
+- If you have an entity that has multiple primary keys, I found it helpful to generate unique pairs/triplets/etc... using find_combos() function like this: 
 
   ```python
   combos = find_combos(ranges=[(1, 500), (1, 500)])
