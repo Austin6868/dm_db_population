@@ -23,8 +23,8 @@
 
   ```python
   record = {
-            'id': i,
-        }
+      'id': i,
+  }
   ```
 
 - When you need to reference one foreign key for example, you can do it like the userid, generate a unique random number of that specific range:
