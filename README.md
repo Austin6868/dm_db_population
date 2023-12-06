@@ -44,6 +44,7 @@
       'bookingid': combos[1],
   }
   ```
+ where userid and bookingid are both primary keys, where both of them have a range where they can be mutually unique.
 
 - If you ever wanted to generate start and end time that happen sequentially, do it like this: 
   ```python
@@ -53,5 +54,3 @@
       'endtime': "'" + end_time + "'",
   }
   ```
-
-where userid and bookingid are both primary keys, where both of them have a range where they can be mutually unique.
