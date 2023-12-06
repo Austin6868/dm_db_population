@@ -19,7 +19,7 @@
 
 ## Additional Notes
 - Faker is one of the most used tools in this code base, here are some [more advanced examples](https://faker.readthedocs.io/en/master/fakerclass.html#examples) if you wanna consider them, but you can always chatGPT:)
-- Usually, when I do a typical ```id``` (auto-incrementing integer), I usually do it like the id in this scenario:
+- Usually, when I do a typical ```id``` (auto-incrementing integer), I usually do it like the ```id``` in this scenario:
 
   ```python
   record = {
