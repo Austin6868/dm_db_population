@@ -38,7 +38,7 @@
               'description': "'" + fake.paragraph(nb_sentences=3) + "'",
               'pricenight': generate_random_decimal(min_value=100, max_value=1000, decimal_places=2),
           }
-  ```python
+  ```
 
 - If you have an entity that has multiple primary keys, I found it helpful to generate unique pairs/triplets/etc... using find_combo function like this: 
 
@@ -50,6 +50,6 @@
             'stars': fake.random_int(min = 1, max = 5),
             'content': "'" + fake.paragraph(nb_sentences=3) + "'",
         }
-  ```python
+  ```
 
 where userid and bookingid are both primary keys, where both of them have a range where they can be mutually unique.
