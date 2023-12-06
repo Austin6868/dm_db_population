@@ -49,8 +49,8 @@
   ```python
   start_time, end_time = generate_random_start_end_times()
   record = {
-      "starttime": "'" + start_time + "'",
-      "endtime": "'" + end_time + "'",
+      'starttime': "'" + start_time + "'",
+      'endtime': "'" + end_time + "'",
   }
   ```
 
