@@ -45,7 +45,7 @@ def generate_data(num_entries):
     
     data = []
 
-    unique_combs = set()
+    unique_combs.clear()
 
     for i in range(1, num_entries + 1):
         
